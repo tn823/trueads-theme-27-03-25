@@ -1,0 +1,101 @@
+const hostName = `https://${location.hostname}/wp-admin/admin-ajax.php`;
+const defaultAvatar = `https://${location.hostname}/wp-content/plugins/dashboardd/trueadsM/assets/image/avatar.svg`;
+const toggleLoading = () => {
+  const loading = $("#loading-page");
+  return {
+    close: () => loading.css({ display: "none" }),
+    open: () => loading.css({ display: "flex" }),
+  };
+};
+const clearAllData = () => {
+  localStorage.clear();
+  sessionStorage.clear();
+};
+
+const removeAccents = (str) => {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D");
+};
+const Toast = {
+  success: (text) =>
+    Toastify({
+      text,
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(135deg, #2ecc71, #27ae60)",
+      },
+    }).showToast(),
+  info: (text) =>
+    Toastify({
+      text,
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(135deg, #3498db, #2980b9)",
+      },
+    }).showToast(),
+  error: (text) =>
+    Toastify({
+      text,
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: " linear-gradient(135deg, #e74c3c, #c0392b)",
+      },
+    }).showToast(),
+  warning: (text) =>
+    Toastify({
+      text,
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: " linear-gradient(135deg, #f39c12, #e67e22)",
+      },
+    }).showToast(),
+};
+async function logoutSite() {
+  toggleLoading().open();
+  clearAllData();
+  await $.ajax({
+    url: hostName,
+    type: "POST",
+    data: {
+      action: "logout_user",
+    },
+    success: () => {
+      toggleLoading().close();
+      location.href = "/login";
+    },
+    error: () => {
+      toggleLoading().close();
+      location.href = "/login";
+    },
+  });
+}
+
+function createSlug(text) {
+  return text
+    .toLowerCase() // Chuyển thành chữ thường
+    .normalize("NFD") // Chuyển ký tự có dấu thành ký tự không dấu
+    .replace(/[\u0300-\u036f]/g, "") // Loại bỏ các dấu
+    .replace(/đ/g, "d") // Thay thế 'đ' thành 'd'
+    .replace(/[^a-z0-9 ]/g, "") // Xóa các ký tự không phải chữ cái, số hoặc dấu cách
+    .trim() // Xóa khoảng trắng ở đầu và cuối chuỗi
+    .replace(/\s+/g, "-"); // Thay khoảng trắng bằng dấu gạch ngang
+}

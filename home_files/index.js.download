@@ -1,0 +1,47 @@
+get_todays_orders();
+
+async function get_todays_orders() {
+    let data = {
+        action: "get_todays_orders",
+        data: {},
+    };
+    let response = await AjaxData(data, "get");
+    $('#revenue-today').text(response.data.total_amount.toLocaleString());
+    $('#order-today').text(response.data.total_orders);
+    console.log(response);
+}
+
+get_status_orders();
+
+async function get_status_orders() {
+    let data = {
+        action: "get_status_orders",
+        data: {},
+    };
+    let response = await AjaxData(data, "get");
+    load_status_orders(response.data);
+}
+
+function load_status_orders(status) {
+    $('#order-cancelled').text(status.cancelled || 0);  
+    $('#not-yet-delivered').text(status.pending || 0);
+    $('#are-delivering').text(status.processing || 0);
+    $('#not-yet-paid').text(status.pending || 0);
+}
+
+$('.status-order .dashboard-order-summary__item').on('click', function (e) {
+    e.preventDefault();
+
+    var statusId = $(this).data('id');
+
+    const currentUrl = window.location.href;
+    const url = new URL(currentUrl); // Tạo đối tượng URL từ URL hiện tại
+
+    // Thêm hoặc cập nhật tham số trên URL
+    url.searchParams.set('arg', 'orders');
+    url.searchParams.set('param', 'index');
+    url.searchParams.set('status', statusId);
+
+    // Chuyển hướng đến URL mới
+    window.location.href = url.toString();
+});
