@@ -5,15 +5,167 @@
     .trueads-logo-login {
         margin-right: auto;
     }
+    .login-right-content img {
+        width: 95%;
+    }
+    .shop-login .login-right-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    /* .shop-login .login-left {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-left: 0 !important;
+    } */
+    .shop-log-left {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-right: 0 !important;
+    }
+    
 
 
 }
 
 
-@media screen and (max-width: 992px) and (min-width: 768px) and (orientation: landscape) {}
+@media screen and (max-width: 992px) and (min-width: 768px) and (orientation: landscape) {
+    .login-right-content {
+        height: 100%;
+    }
+
+    .login-main,
+    .shop-login {
+        height: initial !important;
+    }
+
+    .login-left {
+        margin: 40px 0;
+    }
+    .login-left.shop-log-left {
+        margin: 40px 0 !important;
+    }
+   
+
+    .login-right {
+        padding: 40px 0;
+    }
+    .dr-w-img.toggle-sidebar {
+        display: none;
+    }
+    .header-right .user-info {
+        display: flex !important;
+        order: 1;
+    }
+
+    .content .logo {
+        order: 4;
+    }
+
+    .content #bar-icon {
+        order: 5;
+    }
+
+    .content #notification-icon {
+        order: 2;
+    }
+}
 
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .login-right {
+        padding-bottom: 50px;
+    }
+    .shop-log-left {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .shop-login .login-left-container.container {
+        width: 420px !important;
+    }
+    .dr-w-img.toggle-sidebar {
+        display: none;
+    }
+    .header-right .user-info {
+        display: flex !important;
+        order: 1;
+    }
+    .content .logo {
+        order: 4;
+    }
+    .content #bar-icon {
+        order: 5;
+    }
+    .content #notification-icon {
+        order: 2;
+    }
+    
+}
 
 
-@media screen and (max-width: 549px) {}
+@media screen and (max-width: 549px) {
+    .login-style.trueads-sso {
+        flex-direction: column;
+    }
+    .login-left .social-login__btn-group{
+        display: flex;
+        flex-direction: row;
+    }
+    .trueads-logo-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .trueads-logo-login .trueads-logo {
+        height: 70px;
+        margin-left: 40px;
+       
+    }
+    .login-left {
+        margin: 20px 0;
+    }
+    .login-right {
+        padding-bottom: 0;
+    }
+    .login-right-content p {
+        margin-bottom: 30px;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .login-right-content {
+        margin: 0 25px;
+    }
+    .login-main {
+        height: initial !important;
+        
+    }
+    .login-right {
+        background-image: none;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .login-right-content {
+        height: initial;
+    }
+    .login-right-content img {
+        width: 100%;
+    } 
+    .shop-login {
+        display: flex;
+        flex-direction: column;
+    }
+    .login-left.shop-log-left {
+        padding: 0;
+        margin: 20px 0 !important;
+    }
+    .shop-login .hotline-sp {
+        margin: 20px 15px 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .shop-login .login-left-container.container {
+        width: 100% !important;
+    }
+    .content .header-right.header-content {
+        padding: 10px 15px 10px 15px !important;
+    }
+}

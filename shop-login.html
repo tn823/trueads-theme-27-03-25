@@ -23,7 +23,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             font-size: 16px;
         }
 
@@ -826,94 +825,95 @@
         });
     </script>
     <div class="shop-login">
-        <div lass="login-left" style="    
-            flex: 1;
-            margin: auto;
-            display: flex;
-            justify-content: end;
-            margin-right: 60px;
-        ">
-            <div class="login-left-container container flex flex-col items-center w-full">
-                <div class="trueads-logo-login"><img class="fade show trueads-logo" alt="truads"
-                        src="/asset/img/logo.svg"></div>
-                <div class="login-left-content pd-15">
-                    <h4>Chào mừng Luan Nguyen đã quay lại!</h4>
-                    <p>Hãy chọn doanh nghiệp bạn muốn truy cập và sử dụng nhé.</p>
-                </div>
 
-                <div class="store-list w-full pd-15">
-                    <div id="ownSite" class="">
-                        <!-- <span class="w-full text-sm flex justify-start font-medium mb-[10px]"><label>Cửa hàng của
-                                bạn:</label></span> -->
-                        <div class="store-item cursor-pointer border border-transparent hover:border-[cyan]"
-                            onclick="loginOwnStore(&#39;1&#39;, &#39;https://dev-true-ads.trueads.ai&#39;);">
-                            <div class="store-icon">
-                                <img src="/asset/img/shop-img-1.png" alt="Store Icon">
+            <div class="login-left shop-log-left" style="    
+                flex: 1;
+                margin: auto;
+                display: flex;
+                justify-content: end;
+                margin-right: 60px;
+            ">
+                <div class="login-left-container container flex flex-col items-center w-full">
+                    <div class="trueads-logo-login"><img class="fade show trueads-logo" alt="truads"
+                            src="/asset/img/logo.svg"></div>
+                    <div class="login-left-content pd-15">
+                        <h4>Chào mừng Luan Nguyen đã quay lại!</h4>
+                        <p>Hãy chọn doanh nghiệp bạn muốn truy cập và sử dụng nhé.</p>
+                    </div>
+
+                    <div class="store-list w-full pd-15">
+                        <div id="ownSite" class="">
+                            <!-- <span class="w-full text-sm flex justify-start font-medium mb-[10px]"><label>Cửa hàng của
+                                    bạn:</label></span> -->
+                            <div class="store-item cursor-pointer border border-transparent hover:border-[cyan]"
+                                onclick="loginOwnStore(&#39;1&#39;, &#39;https://dev-true-ads.trueads.ai&#39;);">
+                                <div class="store-icon">
+                                    <img src="/asset/img/shop-img-1.png" alt="Store Icon">
+                                </div>
+                                <div class="store-info">
+                                    <h2>An nhiên store</h2>
+                                    <p>annhienstore.trueads.ai</p>
+                                    <div class="store-details">
+                                        <div class="truechat">
+                                            <p>TrueAds Chat</p>
+                                        </div>
+                                        <div class="trueweb">
+                                            <p>TrueAds Web</p>
+                                        </div>
+                                        <div class="truepos">
+                                            <p>TrueAds POS</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="store-info">
-                                <h2>An nhiên store</h2>
-                                <p>annhienstore.trueads.ai</p>
-                                <div class="store-details">
-                                    <div class="truechat">
-                                        <p>TrueAds Chat</p>
-                                    </div>
-                                    <div class="trueweb">
-                                        <p>TrueAds Web</p>
-                                    </div>
-                                    <div class="truepos">
-                                        <p>TrueAds POS</p>
+                            <div class="store-item cursor-pointer border border-transparent hover:border-[cyan]"
+                                onclick="loginOwnStore(&#39;1&#39;, &#39;https://dev-true-ads.trueads.ai&#39;);">
+                                <div class="store-icon">
+                                    <img src="/asset/img/shop-img-2.png" alt="Store Icon">
+                                </div>
+                                <div class="store-info">
+                                    <h2>Mộc Store</h2>
+                                    <p>mocstore.trueads.ai</p>
+                                    <div class="store-details">
+                                        <div class="truechat">
+                                            <p>TrueAds Chat</p>
+                                        </div>
+                                        <div class="trueweb">
+                                            <p>TrueAds Web</p>
+                                        </div>
+                                        <div class="truecrm">
+                                            <p>TrueAds CRM</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="store-item cursor-pointer border border-transparent hover:border-[cyan]"
-                            onclick="loginOwnStore(&#39;1&#39;, &#39;https://dev-true-ads.trueads.ai&#39;);">
-                            <div class="store-icon">
-                                <img src="/asset/img/shop-img-2.png" alt="Store Icon">
-                            </div>
-                            <div class="store-info">
-                                <h2>Mộc Store</h2>
-                                <p>mocstore.trueads.ai</p>
-                                <div class="store-details">
-                                    <div class="truechat">
-                                        <p>TrueAds Chat</p>
-                                    </div>
-                                    <div class="trueweb">
-                                        <p>TrueAds Web</p>
-                                    </div>
-                                    <div class="truecrm">
-                                        <p>TrueAds CRM</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="siteServe" class="hidden">
+                            <span class="w-full text-sm flex justify-start font-medium mb-[10px] mt-[20px]"><label>Cửa hàng
+                                    bạn
+                                    đang hợp
+                                    tác:</label></span>
+
                         </div>
                     </div>
-                    <div id="siteServe" class="hidden">
-                        <span class="w-full text-sm flex justify-start font-medium mb-[10px] mt-[20px]"><label>Cửa hàng
-                                bạn
-                                đang hợp
-                                tác:</label></span>
-
+                    <div class="shop-info pd-15">
+                        <p class="info login">Bạn đang đăng nhập bằng số điện thoại <span>0908860193</span></p>
+                        <p class="logout">Nếu đây không phải tài khoản của bạn >
+                            <a href="https://trueads.ai/access-to-store/#" onclick="logoutSite();" class="logout">Đăng nhập tài khoản khác</a>
+                        </p>
+                    </div>
+                    <div class="hotline-sp ">
+                        <img src="/asset/img/img-hl-sp.svg" alt="">
+                        <button><i class="fa-solid fa-phone"></i>Gọi Hotline Hỗ Trợ</button>
                     </div>
                 </div>
-                <div class="shop-info pd-15">
-                    <p class="info login">Bạn đang đăng nhập bằng số điện thoại <span>0908860193</span></p>
-                    <p class="logout">Nếu đây không phải tài khoản của bạn >
-                        <a href="https://trueads.ai/access-to-store/#" onclick="logoutSite();" class="logout">Đăng nhập tài khoản khác</a>
-                    </p>
-                </div>
-                <div class="hotline-sp ">
-                    <img src="/asset/img/img-hl-sp.svg" alt="">
-                    <button><i class="fa-solid fa-phone"></i>Gọi Hotline Hỗ Trợ</button>
+            </div>
+            <div class="login-right">
+                <div class="login-right-content">
+                    <p><strong>True<span>Ads</span></strong> Chat và Bán hàng Đa kênh</p>
+                    <img src="/asset/img/bg-2.svg" alt="">
                 </div>
             </div>
-        </div>
-        <div class="login-right">
-            <div class="login-right-content">
-                <p><strong>True<span>Ads</span></strong> Chat và Bán hàng Đa kênh</p>
-                <img src="/asset/img/bg-2.svg" alt="">
-            </div>
-        </div>
     </div>
 
 
