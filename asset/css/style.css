@@ -179,6 +179,7 @@
     gap: 10px;
     line-height: initial;
     height: 32px;
+    box-shadow: 0px 4px 4px 0px #00000040;
 }
 .login-left .icon-eye,
 .login-left .icon-eye-slash {
@@ -194,6 +195,15 @@
 }
 .login-right-content p strong span {
     color: #000;
+}
+.login-right-content p{
+    margin-left: 31px;
+}
+.btn-login {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.register-now p {
+    color: #999;
 }
 /* end CSS login */
 
@@ -258,6 +268,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: #000;
+    line-height: 1em;
 }
 .shop-login .store-list .store-info p {
     font-size: 1.6rem;
@@ -378,7 +389,7 @@
     margin-right: 13px;
 }
 .sidebar_main .menu .title-page {
-    padding: 22px 0 60px 0;
+    padding: 22px 0 36px 0;
     margin: 0 15px 0 15px;
     border-bottom: 1px solid #41475B;
 }
@@ -516,6 +527,11 @@
     transform: rotate(180deg);
     right: -25px;
 }
+
+
+
+
+
 .menu.hide,
 .menu-sm,
 .menu.menu-sm {
@@ -536,7 +552,7 @@
 }
 .menu.menu-sm.nhide .icon-box img {
     width: 34px;
-    height: 34px;
+    height: 35px;
 }
 .menu-box.menu-tool .icon-box img {
     cursor: pointer;
@@ -565,5 +581,19 @@
 
 .sidebar_main .menu.menu-sm.nhide .menu-tool-end {
     border-bottom: 1px solid #fff;
+}
+.menu-tool-box.close {
+    overflow: hidden;
+    height: 27px;
+}
+.close-menu-btn.rotate {
+    transform: rotate(180deg);
+    margin-top: -2px;
+}
+.sidebar_main .menu .menu-tool-box .icon-box  a {
+    font-weight: 400;
+}
+.sidebar_main .menu .menu-tool-box .icon-box a span {
+    font-weight: 700;
 }
 /* End CSS home */
